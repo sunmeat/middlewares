@@ -1,0 +1,159 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+#cityInput {
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    width: 300px;
+    max-width: 100%;
+    outline: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#searchBtn {
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+    #searchBtn:hover {
+        background: #ff5252;
+        transform: translateY(-2px);
+    }
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.3s;
+}
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+.city-name {
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.temp {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.description {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin: 10px 0;
+    opacity: 0.9;
+}
+
+.details {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.loading {
+    text-align: center;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    grid-column: 1 / -1;
+}
+
+footer {
+    text-align: center;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+    footer a {
+        color: #ffd93d;
+        text-decoration: none;
+    }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    .search-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #cityInput {
+        width: 280px;
+    }
+}
